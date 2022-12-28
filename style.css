@@ -8,7 +8,7 @@
 
 body {
     /* background-color: #1c1c1c; */
-    background-image: url(images/tyler-callahan-_JdV7EV_FRo-unsplash\ 1.png);
+    background-image: url(images/background.png);
 }
 
 .logo img {
@@ -98,6 +98,8 @@ main {
     width: 500px;
     height: 25px;
     letter-spacing: 1px;
+    border: slategray 2px solid;
+    border-radius: 5px;
 }
 
 .search {
