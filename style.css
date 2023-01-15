@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 * {
     margin: 0;
     box-sizing: border-box;
@@ -45,6 +46,7 @@ header {
     align-items: center;
     width: 100%;
     padding: 20px;
+    z-index: 1;
 }
 
 .kartinka {
@@ -221,6 +223,7 @@ main {
     /* margin: 0 10px; */
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .background img {
@@ -232,25 +235,124 @@ main {
 
 .t {
     position: absolute;
-    top: 240px;
-    left: 170px;
+    top: 45%;
+    transform: translate(0, -50%);
+    left: 12%;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 1rem;
     color: rgb(0, 0, 0);
     width: 350px;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
 }
 
 .t button {
     background-color: transparent;
-    font-size: 30px;
+    font-size: 1rem;
     border: black 2px solid;
     margin: 5px 0;
     cursor: pointer;
+    color: black;
 }
 
 .t h1 {
-    font-size: 50px;
-    position: relative;
+    font-size: 3rem;
+    padding: 5px;
+}
+
+.t p {
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .t h1 {
+        font-size: 14px;
+    }
+    .t p {
+        font-size: 14px;
+    }
+    .t {
+        width: 200px;
+    }
+    .t button {
+        font-size: 14px;
+    }
+}
+
+.filtri {
+    display: flex;
+    align-items: flex-end;
+    background-image: url("images/bradley-dunn-wxYh-8OMPO4-unsplash 1.png");
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+}
+
+.filtri p {
+    margin: 10px;
+    font-size: 2rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.SUV {
+    display: flex;
+    align-items: flex-end;
+    background-image: url("images/i.png");
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+}
+
+.SUV p {
+    margin: 10px;
+    font-size: 2rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.Hatchbaks {
+    display: flex;
+    align-items: flex-end;
+    background-image: url("images/EN3gAYBXkAgXAYi.png");
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Hatchbaks p {
+    margin: 10px;
+    font-size: 2rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.Convertible {
+    display: flex;
+    align-items: flex-end;
+    background-image: url("images/5a8be65dec05c4ac32000045.jpeg");
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Convertible p {
+    margin: 10px;
+    font-size: 2rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.lists {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+    flex-wrap: nowrap;
+}
+
+.lists div {
+    margin-right: 15px;
+    background-position: center;
+}
+
+.lists p {
+    color: white;
 }
