@@ -1,358 +1,455 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
-* {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: ff-ginger-pro, sans-serif;
-    font-weight: 400;
-    font-style: italic;
-}
-
-body {
-    /* background-color: #1c1c1c; */
-    background-image: url(images/background.png);
-}
-
-.logo img {
-    width: 30px;
-    border-radius: 10px;
-}
-
-header nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style: none;
-}
-
-header nav a {
-    text-decoration: none;
-    color: rgb(127, 31, 52);
-}
-
-header nav li {
-    padding: 20px;
-    font-size: 20px;
-}
-
-header {
-    background-color: #8ed8bae7;
-    height: 90px;
-    box-shadow: 0 0 30px #8ed8ba;
-    /* #585f27	#275f4a */
-    display: flex;
-    position: fixed;
-    top: 0;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    z-index: 1;
-}
-
-.kartinka {
-    border-radius: 50%;
-    background-color: #ff0000;
-    width: 40px;
-    height: 40px;
-    margin-bottom: 6px;
-}
-
-.profile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-main {
-    margin-top: 110px;
-}
-
-.cars {
-    display: flex;
-    background-color: transparent;
-    border-radius: 5px;
-    list-style: none;
-    align-items: center;
-    padding: 10px 10px;
-    margin: 10px 10px;
-    justify-content: space-evenly;
-    letter-spacing: 0.5px;
-    flex-wrap: wrap;
-}
-
-.cars img {
-    width: 150px;
-    max-height: 200px;
-}
-
-.cars p {
-    display: flex;
-    justify-content: center;
-    top: 300px;
-    line-height: 59px;
-    flex-direction: row;
-}
-
-
-/* .car {
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto+Condensed:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+  * {
+      margin: 0;
+      box-sizing: border-box;
+      font-family: ff-ginger-pro, sans-serif;
+      font-weight: 400;
+      font-style: italic;
+  }
+  
+  body {
+      /* background-color: #1c1c1c; */
+      background-image: url(images/background.png);
+  }
+  
+  .logo img {
+      width: 30px;
+      border-radius: 10px;
+  }
+  
+  header nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      list-style: none;
+  }
+  
+  header nav a {
+      text-decoration: none;
+      color: rgb(127, 31, 52);
+  }
+  
+  header nav li {
+      padding: 20px;
+      font-size: 20px;
+  }
+  
+  header {
+      background-color: #8ed8bae7;
+      height: 90px;
+      box-shadow: 0 0 30px #8ed8ba;
+      /* #585f27	#275f4a */
+      display: flex;
+      position: fixed;
+      top: 0;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+      z-index: 1;
+  }
+  
+  .kartinka {
+      border-radius: 50%;
+      background-color: #ff0000;
+      width: 40px;
+      height: 40px;
+      margin-bottom: 6px;
+  }
+  
+  .profile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  main {
+      margin-top: 110px;
+  }
+  
+  .cars {
+      display: flex;
+      background-color: transparent;
+      border-radius: 5px;
+      list-style: none;
+      align-items: center;
+      padding: 10px 10px;
+      margin: 10px 10px;
+      justify-content: space-evenly;
+      letter-spacing: 0.5px;
+      flex-wrap: wrap;
+  }
+  
+  .cars img {
+      width: 150px;
+      max-height: 200px;
+  }
+  
+  .cars p {
+      display: flex;
+      justify-content: center;
+      top: 300px;
+      line-height: 59px;
+      flex-direction: row;
+  }
+  /* .car {
    
 } */
-
-.car a {
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.search input {
-    background-color: transparent;
-    border: none;
-    width: 500px;
-    height: 25px;
-    letter-spacing: 1px;
-    border: slategray 2px solid;
-    border-radius: 5px;
-}
-
-.search {
-    display: flex;
-    justify-content: center;
-    margin: 15px 10px;
-}
-
-.custom-checkbox>input {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-}
-
-
-/* для элемента label, связанного с .custom-checkbox */
-
-.custom-checkbox>span {
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
-}
-
-
-/* создание в label псевдоэлемента before со следующими стилями */
-
-.custom-checkbox>span::before {
-    content: '';
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    flex-shrink: 0;
-    flex-grow: 0;
-    border: 1px solid #adb5bd;
-    border-radius: 0.25em;
-    margin-right: 0.5em;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 50% 50%;
-}
-
-
-/* стили при наведении курсора на checkbox */
-
-.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
-    border-color: #b3d7ff;
-}
-
-
-/* стили для активного чекбокса (при нажатии на него) */
-
-.custom-checkbox>input:not(:disabled):active+span::before {
-    background-color: #b3d7ff;
-    border-color: #b3d7ff;
-}
-
-
-/* стили для чекбокса, находящегося в фокусе */
-
-.custom-checkbox>input:focus+span::before {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-
-/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-
-.custom-checkbox>input:focus:not(:checked)+span::before {
-    border-color: #80bdff;
-}
-
-
-/* стили для чекбокса, находящегося в состоянии checked */
-
-.custom-checkbox>input:checked+span::before {
-    border-color: #0b76ef;
-    background-color: #0b76ef;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
-}
-
-
-/* стили для чекбокса, находящегося в состоянии disabled */
-
-.custom-checkbox>input:disabled+span::before {
-    background-color: #e9ecef;
-}
-
-.lists {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.lists img {
-    width: 300px;
-    height: 300px;
-    border-radius: 5px;
-}
-
-.rek {
-    color: #2f2a5c;
-    display: flex;
-    justify-content: center;
-}
-
-.background {
-    /* margin: 0 10px; */
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.background img {
-    /* height: 600px; */
-    width: 90%;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-.t {
-    position: absolute;
-    top: 45%;
-    transform: translate(0, -50%);
-    left: 12%;
-    text-transform: uppercase;
-    font-size: 1rem;
-    color: rgb(0, 0, 0);
-    width: 350px;
-    padding: 5px;
-    text-align: center;
-}
-
-.t button {
-    background-color: transparent;
-    font-size: 1rem;
-    border: black 2px solid;
-    margin: 5px 0;
-    cursor: pointer;
-    color: black;
-}
-
-.t h1 {
-    font-size: 3rem;
-    padding: 5px;
-}
-
-.t p {
-    font-size: 1rem;
-}
-
-@media screen and (max-width: 1000px) {
-    .t h1 {
-        font-size: 14px;
-    }
-    .t p {
-        font-size: 14px;
-    }
-    .t {
-        width: 200px;
-    }
-    .t button {
-        font-size: 14px;
-    }
-}
-
-.filtri {
-    display: flex;
-    align-items: flex-end;
-    background-image: url("images/bradley-dunn-wxYh-8OMPO4-unsplash 1.png");
-    width: 400px;
-    height: 400px;
-    background-size: cover;
-}
-
-.filtri p {
-    margin: 10px;
-    font-size: 2rem;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-.SUV {
-    display: flex;
-    align-items: flex-end;
-    background-image: url("images/i.png");
-    width: 400px;
-    height: 400px;
-    background-size: cover;
-}
-
-.SUV p {
-    margin: 10px;
-    font-size: 2rem;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-.Hatchbaks {
-    display: flex;
-    align-items: flex-end;
-    background-image: url("images/EN3gAYBXkAgXAYi.png");
-    width: 400px;
-    height: 400px;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.Hatchbaks p {
-    margin: 10px;
-    font-size: 2rem;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-.Convertible {
-    display: flex;
-    align-items: flex-end;
-    background-image: url("images/5a8be65dec05c4ac32000045.jpeg");
-    width: 400px;
-    height: 400px;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.Convertible p {
-    margin: 10px;
-    font-size: 2rem;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-.lists {
-    display: flex;
-    justify-content: flex-start;
-    margin: 10px;
-    flex-wrap: nowrap;
-}
-
-.lists div {
-    margin-right: 15px;
-    background-position: center;
-}
-
-.lists p {
-    color: white;
-}
+  
+  .car a {
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+  
+  .search input {
+      background-color: transparent;
+      border: none;
+      width: 500px;
+      height: 25px;
+      letter-spacing: 1px;
+      border: slategray 2px solid;
+      border-radius: 5px;
+  }
+  
+  .search {
+      display: flex;
+      justify-content: center;
+      margin: 15px 10px;
+  }
+  
+  .custom-checkbox>input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+  }
+  /* для элемента label, связанного с .custom-checkbox */
+  
+  .custom-checkbox>span {
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+  }
+  /* создание в label псевдоэлемента before со следующими стилями */
+  
+  .custom-checkbox>span::before {
+      content: '';
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border: 1px solid #adb5bd;
+      border-radius: 0.25em;
+      margin-right: 0.5em;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+  }
+  /* стили при наведении курсора на checkbox */
+  
+  .custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+      border-color: #b3d7ff;
+  }
+  /* стили для активного чекбокса (при нажатии на него) */
+  
+  .custom-checkbox>input:not(:disabled):active+span::before {
+      background-color: #b3d7ff;
+      border-color: #b3d7ff;
+  }
+  /* стили для чекбокса, находящегося в фокусе */
+  
+  .custom-checkbox>input:focus+span::before {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+  
+  .custom-checkbox>input:focus:not(:checked)+span::before {
+      border-color: #80bdff;
+  }
+  /* стили для чекбокса, находящегося в состоянии checked */
+  
+  .custom-checkbox>input:checked+span::before {
+      border-color: #0b76ef;
+      background-color: #0b76ef;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+  }
+  /* стили для чекбокса, находящегося в состоянии disabled */
+  
+  .custom-checkbox>input:disabled+span::before {
+      background-color: #e9ecef;
+  }
+  
+  .lists {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+  
+  .lists img {
+      width: 300px;
+      height: 300px;
+      border-radius: 5px;
+  }
+  
+  .rek {
+      color: #000000;
+      display: flex;
+      justify-content: center;
+  }
+  
+  .background {
+      /* margin: 0 10px; */
+      display: flex;
+      justify-content: center;
+      position: relative;
+  }
+  
+  .background img {
+      /* height: 600px; */
+      width: 90%;
+      object-fit: cover;
+      border-radius: 15px;
+  }
+  
+  .t {
+      position: absolute;
+      top: 45%;
+      transform: translate(0, -50%);
+      left: 12%;
+      text-transform: uppercase;
+      font-size: 1rem;
+      color: rgb(0, 0, 0);
+      width: 350px;
+      padding: 5px;
+      text-align: center;
+  }
+  
+  .t button {
+      background-color: transparent;
+      font-size: 1rem;
+      border: black 2px solid;
+      margin: 5px 0;
+      cursor: pointer;
+      color: black;
+  }
+  
+  .t h1 {
+      font-size: 3rem;
+      padding: 5px;
+  }
+  
+  .t p {
+      font-size: 1rem;
+  }
+  
+  @media screen and (max-width: 1000px) {
+      .t h1 {
+          font-size: 14px;
+      }
+      .t p {
+          font-size: 14px;
+      }
+      .t {
+          width: 200px;
+      }
+      .t button {
+          font-size: 14px;
+      }
+  }
+  
+  .filtri {
+      display: flex;
+      align-items: flex-end;
+      background-image: url("images/bradley-dunn-wxYh-8OMPO4-unsplash 1.png");
+      width: 400px;
+      height: 400px;
+      background-size: cover;
+  }
+  
+  .filtri p {
+      margin: 10px;
+      font-size: 2rem;
+      font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  .SUV {
+      display: flex;
+      align-items: flex-end;
+      background-image: url("images/i.png");
+      width: 400px;
+      height: 400px;
+      background-size: cover;
+  }
+  
+  .SUV p {
+      margin: 10px;
+      font-size: 2rem;
+      font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  .Hatchbaks {
+      display: flex;
+      align-items: flex-end;
+      background-image: url("images/EN3gAYBXkAgXAYi.png");
+      width: 400px;
+      height: 400px;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+  
+  .Hatchbaks p {
+      margin: 10px;
+      font-size: 2rem;
+      font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  .Convertible {
+      display: flex;
+      align-items: flex-end;
+      background-image: url("images/5a8be65dec05c4ac32000045.jpeg");
+      width: 400px;
+      height: 400px;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+  
+  .Convertible p {
+      margin: 10px;
+      font-size: 2rem;
+      font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  .lists {
+      display: flex;
+      justify-content: flex-start;
+      margin: 10px;
+      flex-wrap: nowrap;
+  }
+  
+  .lists div {
+      margin-right: 15px;
+      background-position: center;
+  }
+  
+  .lists p {
+      color: white;
+  }
+  
+  .rek {
+      color: #000000;
+      display: flex;
+      justify-content: center;
+      margin: 15px;
+  }
+  
+  .TSC {
+      display: flex;
+      justify-content: center;
+      margin: 10px;
+      flex-wrap: nowrap;
+  }
+  
+  .TSC div {
+      margin-right: 35px;
+      background-position: center;
+  }
+  
+  .TSC p {
+      color: rgb(5, 171, 157);
+  }
+  
+  .TSCCARS {
+      height: 450px;
+      width: 250px;
+      background-color: white;
+      margin: 10px;
+  }
+  
+  .q {
+      display: flex;
+      align-items: flex-end;
+      background-image: url("images/14f9eb6a1f3827bc6c31dad00459fbcd\ \(1\).jpg");
+      width: 250px;
+      height: 250px;
+      background-size: cover;
+  }
+  
+  .q p {
+      margin: 10px;
+      font-size: 2rem;
+      font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  .w {
+      display: flex;
+      align-items: flex-end;
+      background-image: url("images/i.png");
+      width: 250px;
+      height: 250px;
+      background-size: cover;
+  }
+  
+  .w p {
+      margin: 10px;
+      font-size: 2rem;
+      font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  .e {
+      display: flex;
+      align-items: flex-end;
+      background-image: url("images/EN3gAYBXkAgXAYi.png");
+      width: 250px;
+      height: 250px;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+  
+  .e p {
+      margin: 10px;
+      font-size: 2rem;
+      font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  .r {
+      display: flex;
+      align-items: flex-end;
+      background-image: url("images/5a8be65dec05c4ac32000045.jpeg");
+      width: 250px;
+      height: 250px;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+  
+  .r p {
+      margin: 10px;
+      font-size: 2rem;
+      font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  .mashini {
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 15px;
+  }
+  
+  .mashini p {
+      margin: 0;
+      font-size: 1.5rem;
+      font-family: 'Montserrat', sans-serif;
+      font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  .buy {
+      border-radius: 10px;
+      color: black;
+      border: black 1.5px solid;
+      font-size: 1.2rem;
+      margin-top: 10px;
+      padding: 10px 50px;
+  }
